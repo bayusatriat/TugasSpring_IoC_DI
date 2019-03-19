@@ -4,5 +4,5 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface MeetAndGreet {
-	public String getFans();
+	public String meetFans();
 }

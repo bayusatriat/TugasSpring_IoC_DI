@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MeetFans implements MeetAndGreet {
 	@Override
-	public String getFans() {
+	public String meetFans() {
 		return "I love you!";
 	}
 }

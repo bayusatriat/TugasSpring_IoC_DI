@@ -1,13 +1,13 @@
 package com.bayu.band;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class MainAnnotation {
+public class MainJavaConfiguration {
 
 	public static void main(String[] args) {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MemberConfig.class);
 		
-		Pianist band = context.getBean("MyPianist", Pianist.class);
+		Vocalist band = context.getBean("vocalist", Vocalist.class);
 		System.out.println("Name: " + band.getName());
 		System.out.println("Age: " + band.getAge());
 		System.out.println("Email: " + band.getEmail());
@@ -16,5 +16,5 @@ public class MainAnnotation {
 		
 		context.close();
 	}
-
+	
 }
